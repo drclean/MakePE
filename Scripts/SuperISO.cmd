@@ -177,10 +177,6 @@ echo Complete!
 	exit
 
 
-
-
-
-	
 :GuessDefaultBIOS
 ::	Make the priority x86.  Last entry wins
 	if exist "%BUILDS%\ISO\WinPE3x64\." set defaultbios={aaaaaaaa-0364-aaaa-aaaa-aaaaaaaaaaaa}
@@ -217,7 +213,7 @@ goto :eof
 	bcdedit %STORE% /set %guid% winpe Yes
 	bcdedit %STORE% /set %guid% ems No
 	bcdedit %STORE% /displayorder %guid% /addlast
-goto :eof
+	goto :eof
 
 :WinPE3x86
 	set name=%prefix%WinPE 3 x86 (Windows 7 x86)

@@ -31,4 +31,6 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof

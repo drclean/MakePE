@@ -155,6 +155,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 	
 :WIM-Mount
@@ -209,6 +211,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 	
 :WinPE-Cleanup
@@ -248,6 +252,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 
 :BasePE-Commit
@@ -291,6 +297,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 
 :BasePE-Mount
@@ -325,6 +333,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 
 :WinPE-Commit
@@ -358,6 +368,8 @@
 	if NOT exist "%CMDFile%" echo echo Executing %CMDFile%> %CMDFile%
 	if exist "%CMDFile%" call "%CMDFile%"
 	echo ===============================================================================
+	echo Waiting 5 Seconds for Review
+	ping -n 5 127.0.0.1>nul
 	goto :eof
 
 :TheEnd

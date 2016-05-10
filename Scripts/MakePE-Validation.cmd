@@ -33,9 +33,9 @@ echo ===========================================================================
 	echo 	C:\Program Files\Microsoft Deployment Toolkit
 	echo 	%Components%\Microsoft Deployment Toolkit
 	echo 	%Components%\Microsoft Deployment Toolkit 2013
-	echo 	%Components%\Microsoft Deployment Toolkit 2013 Update 1
+	rem echo 	%Components%\Microsoft Deployment Toolkit 2013 Update 1
 	echo 	%Components%\MDT 2013
-	echo 	%Components%\MDT 2013 Update 1
+	rem echo 	%Components%\MDT 2013 Update 1
 	
 ::	If MDT is installed, then we use that for %INSTALLDIR%
 	if exist "C:\Program Files\Microsoft Deployment Toolkit\." set INSTALLDIR=C:\Program Files\Microsoft Deployment Toolkit
@@ -43,9 +43,9 @@ echo ===========================================================================
 ::	If you move your MDT directory to Components then one of these options will be set
 	if exist "%Components%\Microsoft Deployment Toolkit\." set INSTALLDIR=%Components%\Microsoft Deployment Toolkit
 	if exist "%Components%\Microsoft Deployment Toolkit 2013\." set INSTALLDIR=%Components%\Microsoft Deployment Toolkit 2013
-	if exist "%Components%\Microsoft Deployment Toolkit 2013 Update 1\." set INSTALLDIR=%Components%\Microsoft Deployment Toolkit 2013 Update 1
+	rem if exist "%Components%\Microsoft Deployment Toolkit 2013 Update 1\." set INSTALLDIR=%Components%\Microsoft Deployment Toolkit 2013 Update 1
 	if exist "%Components%\MDT 2013\." set INSTALLDIR=%Components%\MDT 2013
-	if exist "%Components%\MDT 2013 Update 1\." set INSTALLDIR=%Components%\MDT 2013 Update 1
+	rem if exist "%Components%\MDT 2013 Update 1\." set INSTALLDIR=%Components%\MDT 2013 Update 1
 	if /I "%INSTALLDIR%" == "" set INSTALLDIR=Not Found
 echo ===============================================================================
 	echo Checking MDT DeployRoot
@@ -400,6 +400,8 @@ echo ===========================================================================
 	if /I "%DisplayLog%" == "Yes" start notepad.exe "%MyLog%"
 	if /I "%StopScript%" == "Yes" goto :StopScript
 	if /I "%DoPause%" == "Yes" pause
+	echo Waiting 10 Seconds for Review
+	ping -n 10 127.0.0.1>nul
 	goto :eof
 	
 :StopScript

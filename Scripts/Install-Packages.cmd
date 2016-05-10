@@ -176,6 +176,7 @@
 	if exist "%CABS%\WinPE-EnhancedStorage.cab" "%dism%" /Add-Package /Image:"%CONTENT%" /PackagePath:"%CABS%\WinPE-EnhancedStorage.cab"
 	if exist "%CABS%\%MyLang%\WinPE-EnhancedStorage_%MyLang%.cab" "%dism%" /Add-Package /Image:"%CONTENT%" /PackagePath:"%CABS%\%MyLang%\WinPE-EnhancedStorage_%MyLang%.cab"
 	goto :eof
+	
 :WinPE-Rejuv
 	::	NOT USED IN WINDOWS 7 AIK
 	::	WinPE-Rejuv is used for Refresh Image and is part of the WinRE.wim.  It is not included in ADK WinPE.wim or the Boot.wim
